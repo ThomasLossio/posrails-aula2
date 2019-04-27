@@ -1,14 +1,17 @@
 test:
-	service: Disk
-	root: <%= Rails.root.join("tmp/storage") %>
+  service: S3
+  access_key_id: "AKIAYAANLLSNOPK3RUEN"
+  secret_access_key: "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"
+  region: us-east-2
+  bucket: aulapos
 
 local:
-	service: Disk
-	root: <%= Rails.root.join("storage") %>
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
 
 amazon:
-	service: S3
-	access_key_id: "AKIAYAANLLSN0PK3RUEN"
-	secret_access_key: "EoYLySoNSDSq2gzCnZbjiqILD9F2Ayul4XMnNitn"
-	region: us-east-2
-	bucket: aulapos
+  service: S3
+  access_key_id: "AKIAYAANLLSNOPK3RUEN"
+  secret_access_key: "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"
+  region: us-east-2
+  bucket: aulapos
